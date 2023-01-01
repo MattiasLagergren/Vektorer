@@ -1,0 +1,77 @@
+namespace Öva_Vektorer_och_Sökning;
+class Program
+{
+    static void Main(string[] args)
+    {
+        string[] myArray = new string[5];
+        bool myBool = true;
+        int number = 0;
+        for (int i = 0; i < myArray.Length; i++)
+        {
+            while (myBool)
+            {
+                Console.WriteLine("Hej och välkommen till ryggsäcken!");
+                Console.WriteLine("Välj ett av följande alternativ:");
+                Console.WriteLine("\n[1] - Lägg till valfria föremål i ryggsäcken");
+                Console.WriteLine("[2] - Skriv ut innehållet i ryggsäcken");
+                Console.WriteLine("[3] - Sök bland innehållet i ryggsäcken");
+                Console.WriteLine("[4] - Avsluta programmet");
+
+                int menu = Convert.ToInt32(Console.ReadLine());
+
+                switch (menu)
+                {
+                    case 1:
+                        Console.WriteLine("Skriv in 5 valfria föremål: ");
+
+                        myArray[0] = Console.ReadLine();
+                        myArray[1] = Console.ReadLine();
+                        myArray[2] = Console.ReadLine();
+                        myArray[3] = Console.ReadLine();
+                        myArray[4] = Console.ReadLine();
+
+                        {
+                            Console.WriteLine(myArray[i]);
+                        }
+
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Dina sparade föremål är:");
+                        Console.Write(myArray[0] + " " + myArray[1] + " " + myArray[2] + " " + myArray[3] + " " + myArray[4]);
+                        Console.Read();
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Skriv in sökord");
+                        string search = Console.ReadLine();
+                        bool myBool2 = false;
+
+
+                            if (search == myArray[i])
+                        {
+
+                            myBool2 = true;
+                            Console.WriteLine("\nDu lyckades!");
+                        }
+
+                        if(myBool2 == false)
+                        {
+                            Console.WriteLine("Sökordet hittades inte, försök igen");
+                        }
+
+                        break;
+
+                    case 4:
+                    default:
+                        myBool = false;
+                        break;
+
+
+                }
+            }
+        }
+
+    }
+}
+
